@@ -16,6 +16,7 @@ export default function WeatherApp() {
     setIsLoading(true);
     if (city === "") {
       alert("Enter a city!!!");
+      setIsLoading(false);
     } else {
       fetch(url)
         .then((res) => {
@@ -38,7 +39,6 @@ export default function WeatherApp() {
   useEffect(() => {
     setTimeout(() => {
       setError(false);
-      setIsLoading(false);
     }, 3000);
   }, [error]);
 
