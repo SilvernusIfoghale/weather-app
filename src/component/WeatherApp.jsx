@@ -38,6 +38,7 @@ export default function WeatherApp() {
   useEffect(() => {
     setTimeout(() => {
       setError(false);
+      setIsLoading(false);
     }, 3000);
   }, [error]);
 
